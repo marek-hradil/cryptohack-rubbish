@@ -1,0 +1,32 @@
+Arguments: 
+  /home/marek/.nvm/versions/node/v12.11.1/bin/node /home/marek/.nvm/versions/node/v12.11.1/bin/yarn add libsodium-wrappers
+
+PATH: 
+  /home/marek/.yarn/bin:/home/marek/miniconda3/condabin:/home/marek/.yarn/bin:/home/marek/.nvm/versions/node/v12.11.1/bin:/home/marek/.cargo/bin:/home/marek/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.19.0
+
+Node version: 
+  12.11.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)
+
+npm manifest: 
+  {
+    "name": "LibsodiumPlayground",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

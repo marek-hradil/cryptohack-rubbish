@@ -105,13 +105,17 @@ for text in texts:
     print(text)
 '''
 
-def cribdrag(keyivhex: str):
+def get_ciphertexts():
     ciphertexts = []
     with open('./ciphertexts.txt') as f:
         lines = f.read().splitlines()
         for line in lines:
             num, val = tuple(line.split(' '))
             ciphertexts.append(val)
+    return ciphertexts
+
+def cribdrag(keyivhex: str):
+    ciphertexts = get_ciphertexts()
 
     max_len = 0
     for c in ciphertexts:
@@ -125,6 +129,14 @@ def cribdrag(keyivhex: str):
 
     print(str(len(keyivhex)) + 'of' + str(len('ef6123f01fa92733aec070bed885471fcbcbefdf13872a8e2035109a6dc853501bf2259125e5f48cd1603af9')))
     for i, p in enumerate(plaintexts):
-        print(str(i) + '\t' + p)
+        print(str(i + 1) + '\t' + p)
 
-cribdrag('a61503937ec700478ea2159eacea35')
+    return plaintexts
+
+def is_printable_hex(h):
+    return int(h, 16) in range(32, 127)
+
+
+# cribdrag('a61503937ec700478ea2159eacea35')
+
+cribdrag('a61503937ec700478ea2159eacea3571eba49aab3fa748fb541579ee4dab323e3b')
